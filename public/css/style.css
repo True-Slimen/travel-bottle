@@ -5,8 +5,6 @@
     font-family: roboto;
 }
 
-
-
 h1, h2, h3, h4{
     font-family: Brawler;
     color: #5c5c5c;
@@ -37,6 +35,14 @@ h1, h2, h3, h4{
 
 .icon{
     width: 100%;
+}
+
+.step-local-display-box{
+    padding: 0 15px;
+}
+
+.modify-step button{
+    font-size: 14px;
 }
 
 /*

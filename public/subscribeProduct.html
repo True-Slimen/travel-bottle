@@ -43,7 +43,7 @@
     <div id="find-bottle" class="container mt-5">
       <h2>Inscrivez votre produit !</h2>
       <div class="row">
-        <form id="myForm" class="col-6">
+        <form id="myForm" class="col-8">
           <div class="form-group">
 
             <label class="mb-0 mt-4" for="brand-beer">Premièrement entrez le nom de votre brasserie</label>
@@ -55,13 +55,34 @@
             <label class="mb-0 mt-4" for="year-beer">Ensuite, qu'elle est son année de production ?</label>
             <input class="form-control text-input col-12" type="number" id="year-beer" name="year-beer" max="2021" placeholder="L'an de grâce ?" accept="plain/text" />
 
-            <label class="mb-0 mt-4" for="step-number-beer">Combien d'étape à parcourus votre bière ?</label>
-            <input class="form-control text-input col-12" type="number" id="step-number-beer" name="step-number-beer" max="6" placeholder="1" accept="plain/text" />
+            <label class="mb-0 mt-4" for="start-step-beer">Qu'elle est son point de départ</label>
+            <input class="form-control text-input col-12" type="text" id="start-step-beer" name="start-step-beer" placeholder="Point de départ" accept="plain/text"/>
 
-            <input class="form-control fill submit-input" type="submit" value="Passer à la rédaction des étapes" onclick="onFormSubmit()" />
+            <label class="mb-0 mt-4" for="step-number-beer">Combien d'étape à parcourus votre bière ?</label>
+            <input class="form-control text-input col-12" type="number" id="step-number-beer" name="step-number-beer" max="6" min="1" placeholder="1" accept="plain/text"/>
+
+            <div id="step-display-box" class="card p-3 mt-4">
+              <label class="mb-0" for="step-local-beer-1">Alors, par où est-elle passé ?</label>
+
+              
+
+              <div id="step-local-display-1" class="step-local-display-box row justify-content-between">
+                <input class="form-control text-input col-3" type="text" id="step-local-beer-1" name="step-local-beer-1" placeholder="Lieu" accept="plain/text"/>
+                <input class="form-control text-input col-3" type="text" id="step-city-beer-1" name="step-city-beer-1" placeholder="Ville" accept="plain/text"/>
+                <input class="form-control text-input col-3" type="text" id="step-country-beer-1" name="step-country-beer-1" placeholder="Pays" accept="plain/text"/>
+              </div>
+            </div>
+
+            <div class="row modify-step justify-content-around">
+              <button id="btnAddStep" class="btn btn-primary border mt-3 col-3" type="button">Ajouter une étape</button>
+              <button id="btnDeleteStep" class="btn btn-danger border mt-3 col-3" type="button">Supprimer une étape</button>
+            </div>
+            
+
+            <input class="mt-3 form-control fill submit-input" type="submit" value="Inscrire mon produit" onclick="onFormSubmit()" />
           </div>
         </form>
-        <ul class="pl-5 mt-5 col-6 data-subscribe-display">
+        <ul class="pl-5 mt-5 col-4 data-subscribe-display">
           <li class="row mt-3 data-subscribe-display-row">
             <strong>Nom de la brasserie</strong>&nbsp;<p id="brand-beer-display"></p>
           </li>
@@ -206,7 +227,7 @@
   </section>
 <script src="./js/script.js"></script>
 <script src="./js/script-rgpd.js"></script>
-<script src="./js/subscribe-product.js"></script>
+<script src="./js/subscribeproduct.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
