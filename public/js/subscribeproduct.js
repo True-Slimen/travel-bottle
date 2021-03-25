@@ -6,7 +6,6 @@ var deleteStep = document.getElementById("btnDeleteStep");
 var inputProductStep = document.getElementById("step-number-beer");
 var i = 1;
 
-var div = document.createElement("div");
 var localInput = document.createElement("input");
 var cityInput = document.createElement("input");
 var countryInput = document.createElement("input");
@@ -15,6 +14,7 @@ var numberProductStep = document.getElementById("step-number-beer").value;
 
 var displayStepBox = document.getElementById("step-display-box");
 
+var div = document.createElement("div");
 div.classList.add("row");
 div.classList.add("justify-content-between");
 div.classList.add("step-local-display-box");
@@ -44,31 +44,19 @@ localInput.setAttribute('placeholder', 'Lieu');
 cityInput.setAttribute('placeholder', 'Ville');
 countryInput.setAttribute('placeholder', 'Pays');
 
-
-
-inputProductStep.addEventListener('change', displayInputStep);
-
 addStep.addEventListener('click', addStepFunc);
 
+var test = false;
 function addStepFunc() {
+    console.log('func run !');
+
     
-    displayStepBox.appendChild(div)
-    div.appendChild(localInput)
-    div.appendChild(cityInput)
-    div.appendChild(countryInput)
-}
-
-function displayInputStep() {
-    
-
-
-
-    console.log('la val ' + numberProductStep);
-    for(i=1; i < numberProductStep; i++){
+    if(test == false){
         displayStepBox.appendChild(div)
-        div.appendChild(localInput)
-        div.appendChild(cityInput)
-        div.appendChild(countryInput)
     }
-    i=1;
+    test = true;
+
+    div.appendChild(localInput);
+    div.appendChild(cityInput);
+    div.appendChild(countryInput);
 }
