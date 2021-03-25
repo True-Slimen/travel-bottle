@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Accueil</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Brawler&family=Roboto:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <section class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="col-2"> 
+        <a class="navbar-brand" href="#">
+          <img src="/image/logo.png" alt="">
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav col-12">
+          <li class="fill button nav-item active">
+            <a class="nav-link" href="/index.html">Accueil <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="fill button nav-item">
+            <a class="nav-link" href="/subscribeProduct.html">Inscrire mon produit</a>
+          </li>
+          <li class="fill button nav-item">
+            <a class="nav-link" href="#">A propos</a>
+          </li>
+          <li class="fill button nav-item">
+            <a class="nav-link" href="#">Nous contacter</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-8 title-box">
+          <h1>Bienvenue sur Travel Bottle !</h1>
+          <p class="title">"Le parcours d'une bière commence dès le semis, mais ne s'arrète pas à l'embouteillage"</p>
+          <p class="title">Apprennez comment cette bouteille est arrivé entre vos mains</p>
+          <a href="#find-bottle">
+          <button type="button" class="btn p-3 mt-3 btn-primary">Pister ma bière !</button>
+          </a>
+        </div>
+            <div class="col-4">
+            <img id="mascotte" src="/image/bottle.png" alt="mascotte">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="middle">
+    <div class="container my-3 py-3">  
+      <div class="row col-12 mx-auto">
+        <div class="col-3">
+          <div class="col-6 mt-4 mx-auto"><img class="icon" src="/image/icon-beer1.png" alt=""></div>
+          <p class="col-10 mt-3 mx-auto text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis cupiditate incidunt culpa.</p>
+        </div>
+        <div class="col-3">
+          <div class="col-6 mt-4 mx-auto"><img class="icon" src="/image/icon-beer2.png" alt=""></div>
+          <p class="col-10 mt-3 mx-auto text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis cupiditate incidunt culpa.</p>
+        </div>
+        <div class="col-3">
+          <div class="col-6 mt-4 mx-auto"><img class="icon" src="/image/icon-beer3.png" alt=""></div>
+          <p class="col-10 mt-3 mx-auto text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis cupiditate incidunt culpa.</p>
+        </div>
+        <div class="col-3">
+          <div class="col-6 mt-4 mx-auto"><img class="icon" src="/image/icon-beer4.png" alt=""></div>
+          <p class="col-10 mt-3 mx-auto text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis cupiditate incidunt culpa.</p>
+        </div>
+  
+
+      </div>
+    </div>
+  </section>
+
+  <section class="medium">
+      <div id="find-bottle" class="container mt-5">
+        <h2>Ici informez-vous sur le parcours de votre bières</h2>
+        <div class="row">
+          <form id="myForm" class="col-6">
+            <div class="form-group">
+              <label class="mb-0 mt-4" for="">Passons aux choses sérieuses, entrez la référence de votre produit</label>
+              <input class="form-control text-input col-12" type="text" id="text" name="text" placeholder="Réference produit" accept="plain/text" />
+              <input class="form-control fill submit-input col-4" type="submit" value="Retrouver" onclick="onFormSubmit()" />
+            </div>
+          </form>
+          <ul class="pl-5 mt-5 col-6 data-display">
+            <li class="row mt-3 data-display-row">
+              <strong>Marque et gamme :</strong>&nbsp;<p>33" Exports</p>
+            </li>
+            <li class="row mt-3 data-display-row">
+              <strong>Départ</strong>&nbsp;<p>Usine Brollovof Liquid, Petroyska, Russia</p>
+            </li>
+            <li class="row mt-3 data-display-row">
+              <strong>Etape 1</strong>&nbsp;<p>Dépot extérieur, Vandershlutz, Allemagne</p>
+            </li>
+            <li class="row mt-3 data-display-row">
+              <strong>Etape 2</strong>&nbsp;<p>Déchetterie, Grigny la Grande Borgne, Paris</p>
+            </li>
+            <li class="row mt-3 data-display-row">
+              <strong>Etape 3</strong>&nbsp;<p>Epicerie Arrarati, Place de la Comédie, Montpellier</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </section>
+
+  <section class="middle py-5">
+    <div class="container mt-3 py-3">  
+      <div class="row col-12 mx-auto">
+        <p class="title">
+          Vous proposez un produit ? Référencez-le !
+        </p>
+        <div class="col-12">
+          <a href="subscribeProduct.html">
+            <button type="button" class="btn p-3 mt-3 btn-primary">Je référence mon produit</button>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <section class="py-5 bottom container">
+      <div class="row">
+        <div class="col-4">
+          <ul class="mx-auto">
+            <li>
+              <a href="/index.html">
+                Accueil
+              </a>
+            </li>
+            <li class="my-2">
+              <a href="/subscribeProduct.html">
+                Inscrire mon produit
+              </a>
+            </li>
+            <li class="my-2">
+              <a href="#">
+                A propos
+              </a>
+            </li>
+            <li class="my-2">
+              <a href="#">
+                Nous contacter
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <ul>
+            <li>
+              <a href="#">
+                Accueil
+              </a>
+            </li>
+            <li class="my-2">
+              <a href="/index.html">
+                Appli
+              </a>
+            </li>
+            <li class="my-2">
+              <a href="/subscribeProduct.html">
+                Inscrire mon produit
+              </a>
+            </li>
+            <li class="my-2">
+              <a href="#">
+                Nous contacter
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <ul>
+            <li>
+              <a href="/index.html">
+                Accueil
+              </a>
+            </li>
+            <li class="my-2">
+              <a href="/subscribeProduct.html">
+                Inscrire mon produit
+              </a>
+            </li>
+            <li class="my-2">
+              <a href="#">
+                A propos
+              </a>
+            </li>
+            <li class="my-2">
+              <a href="#">
+                Nous contacter
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <div class="bottom-footer col-12 py-3 row mx-0">
+      <i class="mx-auto">A Travel Bottle website</i>
+    </div>
+  </footer>
+  <section id="overlay" class="overlay rgpd-popup">
+    <div class="row">
+      <button type="button" id="close-popup" class="btn close-button mr-3 btn-danger">X</button>
+    </div>
+    <div id="rgpd-popup" class="container">
+      <h4>En utilisant se site vous consentez à l'utilisation de cookies</h4>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora perspiciatis quod, nesciunt fugit officiis velit dignissimos ipsam fuga earum, possimus debitis adipisci, cupiditate nostrum eveniet! Nulla quis id distinctio architecto doloremque soluta sequi totam voluptates nam sit alias dolores, explicabo magnam fuga repellendus reiciendis, asperiores expedita sapiente exercitationem consequuntur. Obcaecati corporis eius quos reprehenderit suscipit error cum numquam inventore expedita voluptate consequuntur veritatis, iusto explicabo, nisi, eveniet vel. Esse, repudiandae!</p>
+      <div>
+        <div class="col-6 row">
+          <div class="col-3">
+            <button type="button" id="accept-popup" class="btn btn-light">Accepter</button>
+          </div>
+          <div class="col-3">
+            <button type="button" id="decline-popup" class="btn btn-light">Refuser</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<script src="/js/script.js"></script>
+<script src="/js/script-rgpd.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
