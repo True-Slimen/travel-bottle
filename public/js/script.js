@@ -1,32 +1,44 @@
-function onFormSubmit() {
-    toBase64(document.getElementById('text').files[0])
-        .then((fileAsBase64) => {
-            fetch('http://localhost:5000/insertMonDocument', {
-                method: 'POST',
-                body: {
-                    document: fileAsBase64,
-                },
-            })
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (json) {
-                    console.log(json);
-                    // do whatever you fucking want with your json
-                });
-        })
-        .catch((err) => console.error(err));
-}
+function onSearchBeerSubmit() {
+	fetch('/getBeer', {
+		method: 'POST',
+		body: {
+			reference: document.getElementById('beerReference'),
+		},
+	})
+		.then(function (response) {
+			return response.json();
+		})
+		.then(function (json) {
+			json = {
+				productionyear: '1995',
+				origin: 'Belgique',
+				name: 'IPA Stout',
+				brand: 'Zoobrew',
+				steps: ['Sahara', 'grande bretagne', 'Amérique du Nord', 'France'],
+			}
+			console.log(json);
+			document.getElementById('productionYear').innerText = json.productionyear;
+			document.getElementById('origin').innerText = json.origin;
+			document.getElementById('name').innerText = json.name;
 
-/**
- * Get base64 of the content of a document
- * @returns {Promise}
- **/
-function toBase64(file) {
-    return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = () => resolve(reader.result);
-        reader.onerror = (error) => reject(error);
-    });
+			for (let i = 0; i < json.steps.length; i++) {
+				const step = json.steps[i];
+
+				const htmlStep = document.createElement('li');
+				htmlStep.classList.add('row');
+				htmlStep.classList.add('mt-3');
+				htmlStep.classList.add('data-display-row');
+
+				const strong = document.createElement('strong');
+				strong.innerText = `Étape ${i} : `;
+
+				const text = document.createElement('p');
+				text.innerText = step;
+
+				htmlStep.appendChild(strong);
+				htmlStep.appendChild(text);
+				document.getElementById('infosList').appendChild(htmlStep);
+			}
+		})
+		.catch((err) => console.error(err));
 }
