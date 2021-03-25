@@ -1,7 +1,15 @@
 {
-  "dependencies": {
-    "bootstrap": "^4.6.0",
-    "bootstrap-vue": "^2.21.2",
-    "vue": "^2.6.12"
-  }
+	"name": "kit-game",
+	"version": "1.0.0",
+	"description": "",
+	"main": "./bin/www.js",
+	"scripts": {
+		"start": "node ./bin/www.js",
+		"nodemon": "nodemon ./bin/www.js --legacy-watch"
+	},
+	"license": "Apache-2.0",
+	"dependencies": {
+		"express": "^4.17.1"
+	},
+	"devDependencies": {}
 }
