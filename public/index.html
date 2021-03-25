@@ -16,7 +16,7 @@
 		/>
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
-	<body>
+	<body onload="getlastBeer()">
 		<section class="header">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<div class="col-2">
@@ -175,24 +175,10 @@
 							/>
 						</div>
 					</div>
-					<ul id="infosList" class="pl-5 mt-5 col-6 data-display">
-						<li class="row mt-3 data-display-row">
-							<strong>Année de production :</strong>&nbsp;
-							<p id="productionYear">1990</p>
-						</li>
-						<li class="row mt-3 data-display-row">
-							<strong>Nom :</strong>&nbsp;
-							<p id="name">
-								Usine Brollovof Liquid, Petroyska, Russia
-							</p>
-						</li>
-						<li class="row mt-3 data-display-row">
-							<strong>Départ :</strong>&nbsp;
-							<p id="origin">
-								Usine Brollovof Liquid, Petroyska, Russia
-							</p>
-						</li>
-					</ul>
+					<ul
+						id="infosList"
+						class="pl-5 mt-5 col-6 data-display"
+					></ul>
 				</div>
 			</div>
 		</section>
