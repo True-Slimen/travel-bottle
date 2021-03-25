@@ -1,9 +1,6 @@
 function onSearchBeerSubmit() {
-	fetch('/getBeer', {
-		method: 'POST',
-		body: {
-			reference: document.getElementById('beerReference'),
-		},
+	fetch(`/getBeer/?beer_id=${document.getElementById('beerReference')}`, {
+		method: 'GET',
 	})
 		.then(function (response) {
 			return response.json();
@@ -24,10 +21,7 @@ function onSearchBeerSubmit() {
 
 function getlastBeer() {
 	fetch('/getBeers', {
-		method: 'POST',
-		body: {
-			reference: document.getElementById('beerReference'),
-		},
+		method: 'GET'
 	})
 		.then(function (response) {
 			return response.json();
