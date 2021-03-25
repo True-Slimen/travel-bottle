@@ -1,19 +1,19 @@
-    var btnPopupClose = document.getElementById('close-popup');
-    var btnPopupAccept = document.getElementById('accept-popup');
-    var btnPopupDecline = document.getElementById('decline-popup');
+let btnPopupClose = document.getElementById('close-popup');
+let btnPopupAccept = document.getElementById('accept-popup');
+let btnPopupDecline = document.getElementById('decline-popup');
 
-    var overlay = document.getElementById('overlay');
-    
-    btnPopupClose.addEventListener('click',openModal);
-    btnPopupAccept.addEventListener('click',openModal);
+let overlay = document.getElementById('overlay');
 
-    btnPopupDecline.addEventListener('click',RedirectionJavascript);
-    
-    
-    function openModal() {
-    overlay.style.display='none';
-    }
+btnPopupClose.addEventListener('click', openModal);
+btnPopupAccept.addEventListener('click', openModal);
 
-    function RedirectionJavascript(){
-        document.location.href="https://google.com";
-      }
+btnPopupDecline.addEventListener('click', RedirectionJavascript);
+
+function openModal() {
+	overlay.style.display = 'none';
+	setCookie('rgpd', 'accepted=1', 1000000);
+}
+
+function RedirectionJavascript() {
+	document.location.href = "https://google.com";
+}

@@ -78,3 +78,10 @@ function createListElement(title, text) {
 
 	return htmlElement;
 }
+
+function checkRgpdCookie() {
+	console.log(getCookie('rgpd'));
+	if (getCookie('rgpd') == 'accepted=1') {
+		document.getElementById('overlay').style.display = 'none';
+	}
+}
