@@ -57,7 +57,7 @@ function fillbeerInfo(beer) {
 	for (let i = 0; i < beer.steps.length; i++) {
 		const step = beer.steps[i];
 
-		document.getElementById('infosList').appendChild(createListElement(`Étape ${i} :&nbsp;`, step));
+		document.getElementById('infosList').appendChild(createListElement(`Étape ${i + 1} :&nbsp;`, step));
 	}
 }
 
