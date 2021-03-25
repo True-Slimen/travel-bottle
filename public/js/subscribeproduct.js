@@ -10,8 +10,6 @@ var localInput = document.createElement("input");
 var cityInput = document.createElement("input");
 var countryInput = document.createElement("input");
 
-var numberProductStep = document.getElementById("step-number-beer").value;
-
 var displayStepBox = document.getElementById("step-display-box");
 
 var div = document.createElement("div");
